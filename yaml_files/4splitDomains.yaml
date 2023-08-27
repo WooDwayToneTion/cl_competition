@@ -7,6 +7,6 @@ AGENT:
 
 DATASET:
   NAME: "4splitDomains"
-  ROOT: 'input/contest_data/4splitDomains'
+  ROOT: '/kaggle/input/continual-learning-data/continual_learning_data/4splitDomains'
   NUM_TASKS: 4
   NUM_CLASSES: 60
