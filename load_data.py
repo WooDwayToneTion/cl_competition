@@ -85,14 +85,15 @@ def get_this_dataset(root, task_name, train_trans=None, val_trans=None, test_tra
 if __name__ == "__main__":
     # 读取 4splitDomains 样例
     # root 建议填写绝对路径
-    train_dataset, val_dataset = get_this_dataset(root='/home/mw/project/4splitDomains', task_name='3')
+    HOME = "/kaggle/input/continual-learning-data/continual_learning_data/"
+    train_dataset, val_dataset = get_this_dataset(root=HOME + '4splitDomains', task_name='3')
     for record in train_dataset:
         print(f"本训练任务包含{train_dataset.__len__()}条记录")
         print(record)
         break
 
     # 读取 10splitTasks 样例
-    train_dataset, val_dataset = get_this_dataset(root='/home/mw/project/10splitTasks', task_name='6')
+    train_dataset, val_dataset = get_this_dataset(root=HOME + '10splitTasks', task_name='6')
     for record in val_dataset:
         print(f"本验证任务包含{val_dataset.__len__()}条记录")
         print(record)
